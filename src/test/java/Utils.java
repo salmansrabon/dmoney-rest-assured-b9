@@ -7,4 +7,13 @@ public class Utils {
         config.setProperty(key, value);
         config.save();
     }
+    public static int generateRandom(int min, int max){
+        double rand= Math.random()*(max-min)+min;
+        return (int) rand;
+    }
+
+    public static void main(String[] args) {
+        int rand= generateRandom(100000,999999);
+        System.out.println(rand);
+    }
 }
